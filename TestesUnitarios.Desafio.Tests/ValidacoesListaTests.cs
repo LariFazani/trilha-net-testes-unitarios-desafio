@@ -60,9 +60,10 @@ public class ValidacoesListaTests
         // Arrange
         var lista = new List<int> { 5, 7, 8, 9 };
         var resultadoEsperado = new List<int> { 10, 14, 16, 18 };
+        var numero = 2;
         
         // Act
-        var resultado = _validacoes.MultiplicarNumerosLista(lista);
+        var resultado = _validacoes.MultiplicarNumerosLista(lista, numero);
 
         // Assert
         Assert.Equal(resultadoEsperado, resultado);
@@ -76,7 +77,7 @@ public class ValidacoesListaTests
 
         // Arrange
         var lista = new List<int> { 5, -1, -8, 9 };
-        var numeroParaRetornar = 10;
+        var numeroParaRetornar = 9;
 
         // Act
         var resultado = _validacoes.RetornarMaiorNumeroLista(lista);
